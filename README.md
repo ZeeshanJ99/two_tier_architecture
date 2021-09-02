@@ -141,7 +141,5 @@ To create an AMI on AWS,
  - use the same key
  - redo these stages for the db
  
- - 
-
-
+ - you can now ssh into the AMIs available and run the front end (app) and back end (db)
 
