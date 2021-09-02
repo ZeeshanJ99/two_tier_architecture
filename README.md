@@ -2,7 +2,7 @@
 ## AWS introduction
 Amazon Web Services(AWS) is a cloud service from Amazon, which provides services in the form of building blocks, these building blocks can be used to create and deploy any type of application in the cloud.
 
-## ## Instructions for setting up EC2 machine
+## Instructions for setting up EC2 machine
 
 In AWS, make sure the Ireland server is selected. Then proceed and navigate to Services, then to EC2 and launch an instance.
 
@@ -155,3 +155,6 @@ To create an AMI on AWS,
 - `npm start`
 
 -  use the new ami app ip address and add /posts to see posts
+
+![two tier architecture diagram](https://user-images.githubusercontent.com/88186084/131873184-14621d49-9aaf-4ebd-8fa2-68aa99f49525.jpg)
+
