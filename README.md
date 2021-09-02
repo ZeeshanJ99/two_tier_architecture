@@ -164,7 +164,10 @@ To create an AMI on AWS,
 
 stand up points:
 Covered Cloud computing
+
 An introduction to AWS
+
 refactored monolith architecture into 2 tier architecture and thus migrated from on prem to cloud
+
 mongo db > node app
 
