@@ -140,6 +140,18 @@ To create an AMI on AWS,
  - use the same instance settings and security groups used for the selected instance
  - use the same key
  - redo these stages for the db
+
+- stop the created instances as you now have the AMIs running
  
  - you can now ssh into the AMIs available and run the front end (app) and back end (db)
+ - You will need to change the root on the ssh to ubuntu
+ - 
+`scp -ri ~/.ssh/sre_key.pem app ubuntu@3.250.188.220:/home/ubuntu/app`
 
+ -  When ssh'd in both machines, you will need to replace the ip in the db ami instance with the new ami app ip
+ -  Also redo the export of the host env variable in app with the new db public ID
+
+- cd into app
+- `npm start`
+
+-  use the new ami app ip address and add /posts to see posts
