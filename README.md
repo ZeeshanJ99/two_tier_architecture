@@ -162,7 +162,8 @@ To create an AMI on AWS,
 ![two tier architecture diagram](https://user-images.githubusercontent.com/88186084/131873184-14621d49-9aaf-4ebd-8fa2-68aa99f49525.jpg)
 
 
-stand up points:
+## stand up points:
+
 Covered Cloud computing
 
 An introduction to AWS
