@@ -156,5 +156,15 @@ To create an AMI on AWS,
 
 -  use the new ami app ip address and add /posts to see posts
 
+
+## Two tier architecture diagram
+
 ![two tier architecture diagram](https://user-images.githubusercontent.com/88186084/131873184-14621d49-9aaf-4ebd-8fa2-68aa99f49525.jpg)
+
+
+stand up points:
+Covered Cloud computing
+An introduction to AWS
+refactored monolith architecture into 2 tier architecture and thus migrated from on prem to cloud
+mongo db > node app
 
