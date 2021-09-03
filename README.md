@@ -16,8 +16,12 @@ In AWS, make sure the Ireland server is selected. Then proceed and navigate to S
 - Add a rule HTTP with 0.0.0.0 IP address to allow for access from any IP
 - choose an existing key and launch the machine (e.g. sre_key.pem) THESE KEYS MUST NEVER BE SHARED ON THE CLOUD MAKE SURE TO NOT PUSH THIS FILE
 
+
 ## Adding port 3000
 - Navigate to security groups and add the inbound rule. The port should be `3000` and the source as `Anywhere IPV4` 
+
+
+![image](https://user-images.githubusercontent.com/88186084/131982412-b5f0ae7f-7f21-4940-84af-5041bbffee33.png)
 
 
 ## Access the machine through the terminal
@@ -57,6 +61,10 @@ This is completed from the localhost terminal (where the app folder was created)
 ## reverse proxy
 - in app
 `sudo nano /etc/nginx/sites-available/default`
+
+![image](https://user-images.githubusercontent.com/88186084/131982764-7f2deaee-f08d-49ca-851a-de7ea5791635.png)
+
+
 
 replace the location in the file, you can replace the port code 8080 to whatever you need it to be, e.g. 3000
 
@@ -127,7 +135,10 @@ The app will run on the public IPV4 address. add /posts on the end of the public
 ## Building AMIs
 An Amazon Machine Image (AMI) provides the information required to launch an instance. You must specify an AMI when you launch an instance.
 
-To create an AMI on AWS, 
+![image](https://user-images.githubusercontent.com/88186084/131983556-5f4beadf-38e8-4967-bd90-004cfdd63083.png)
+
+
+### To create an AMI on AWS
 
 - click on the instance you would like to create the AMI upon e.g. app
 - select actions at the top of the screen
@@ -157,18 +168,6 @@ To create an AMI on AWS,
 -  use the new ami app ip address and add /posts to see posts
 
 
-## Two tier architecture diagram
+## Two tier architecture
 
 ![two tier architecture diagram](https://user-images.githubusercontent.com/88186084/131873184-14621d49-9aaf-4ebd-8fa2-68aa99f49525.jpg)
-
-
-## stand up points:
-
-Covered Cloud computing
-
-An introduction to AWS
-
-refactored monolith architecture into 2 tier architecture and thus migrated from on prem to cloud
-
-mongo db > node app
-
