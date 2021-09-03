@@ -24,8 +24,9 @@ In AWS, make sure the Ireland server is selected. Then proceed and navigate to S
 Get the key and save it into a memorable directory that you WILL NOT UPLOAD ANYWHERE
 Copy the chmod line for the first time and then place ssh line into the git bash terminal where the app is located. 
 
-`scp -ri ~/.ssh/sre_key.pem app ubuntu@3.250.188.220:/home/ubuntu/app`
+`ssh -i "sre_key.pem" root@ec2-12-208-152-38.eu-west-1.compute.amazonaws.com`
 - the ip changes everytime you launch a new instance
+
 
 ## Provisioning in app
 Follow these instructions to provision the ec2 machine  
@@ -50,8 +51,7 @@ Provisioning is very similar to the way the locally hosted app machine was provi
 
 ## Syncing app folder
 This is completed from the localhost terminal (where the app folder was created)
-
-`scp -ri ~/.ssh/sre_key.pem /app ubuntu@:3.250.72.105/home/ubuntu/app`
+`scp -ri ~/.ssh/sre_key.pem app ubuntu@3.250.188.220:/home/ubuntu/app`
 
 
 ## reverse proxy
@@ -145,8 +145,8 @@ To create an AMI on AWS,
  
  - you can now ssh into the AMIs available and run the front end (app) and back end (db)
  - You will need to change the root on the ssh to ubuntu
- - 
-`scp -ri ~/.ssh/sre_key.pem app ubuntu@3.250.188.220:/home/ubuntu/app`
+ 
+`ssh -i "sre_key.pem" ubuntu@ec2-12-208-152-38.eu-west-1.compute.amazonaws.com`
 
  -  When ssh'd in both machines, you will need to replace the ip in the db ami instance with the new ami app ip
  -  Also redo the export of the host env variable in app with the new db public ID
